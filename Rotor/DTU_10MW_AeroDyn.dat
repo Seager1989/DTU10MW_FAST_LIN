@@ -1,0 +1,63 @@
+--------- AeroDyn v14.05.* INPUT FILE -------------------------------------------------------------------------
+DTU 10.0 MW offshore baseline aerodynamic input properties;Compatible with AeroDyn v14, v1.0, Michael Borg (borg@dtu.dk), DTU Wind Energy, November 2015
+BEDDOES                          StallMod       - Dynamic stall included [BEDDOES or STEADY] (unquoted string)
+USE_CM                           UseCm          - Use aerodynamic pitching moment model? [USE_CM or NO_CM] (unquoted string)
+EQUIL                            InfModel       - Inflow model [DYNIN or EQUIL] (unquoted string)
+SWIRL                            IndModel       - Induction-factor model [NONE or WAKE or SWIRL] (unquoted string)
+0.0001                         	 AToler         - Induction-factor tolerance (convergence criteria) (-)
+PRANDtl                          TLModel        - Tip-loss model (EQUIL only) [PRANDtl, GTECH, or NONE] (unquoted string)
+PRANDtl                          HLModel        - Hub-loss model (EQUIL only) [PRANdtl or NONE] (unquoted string)
+0   TwrShad      - Tower-shadow velocity deficit (-)
+     9999.9   ShadHWid     - Tower-shadow half width (m)
+     9999.9   T_Shad_Refpt - Tower-shadow reference point (m)
+	 1.225                         AirDens        - Air density (kg/m^3)
+   1.464E-5                      KinVisc        - Kinematic air viscosity [CURRENTLY IGNORED] (m^2/sec)
+   default                       DTAero         - Time interval for aerodynamic calculations (sec) !bjj: was 0.02479
+   6        NumFoil     - Number of airfoil files (-)
+"Aerodata/Cylinder.dat"    		FoilNm      - Names of the airfoil files[NumFoil lines] (quoted strings)
+"Aerodata/FFA_W3_600.dat"
+"Aerodata/FFA_W3_480.dat"
+"Aerodata/FFA_W3_360.dat"
+"Aerodata/FFA_W3_301.dat"
+"Aerodata/FFA_W3_241.dat"
+37        BldNodes    - Number of blade nodes used for analysis (-)
+RNodes      AeroTwst        DRNodes  Chord       NFoil  PrnElm
+4.800000 14.491060  4.0000 5.380000 1 NOPRINT
+7.512000 14.424209  1.4240 5.422947 1 NOPRINT
+9.119000 14.260414  1.7900 5.503171 1 NOPRINT
+10.275000 14.043888 0.5220 5.577011 2 NOPRINT
+11.658000 13.581343 2.2440 5.678866 2 NOPRINT
+13.258000 12.908756 0.9560 5.802144 2 NOPRINT
+15.068000 11.908994 2.6640 5.937015 2 NOPRINT
+17.075000 10.680366 1.3500 6.063689 3 NOPRINT
+19.267000 9.479599  3.0340 6.157123 3 NOPRINT
+21.633000 8.385097  1.6980 6.201273 4 NOPRINT
+24.156000 7.606940  3.3480 6.191868 4 NOPRINT
+26.823000 6.957972  1.9860 6.128953 4 NOPRINT
+29.617000 6.369216  3.6020 6.013883 5 NOPRINT
+32.521000 5.809149  2.2060 5.854190 5 NOPRINT
+35.519000 5.254826  3.7900 5.657992 5 NOPRINT
+38.591000 4.691180  2.3540 5.434810 5 NOPRINT
+41.720000 4.087893  3.9040 5.190131 6 NOPRINT
+44.886000 3.445390  2.4280 4.929373 6 NOPRINT
+48.072000 2.790276  3.9440 4.658367 6 NOPRINT
+51.257000 2.125135  2.4260 4.383529 6 NOPRINT
+54.423000 1.481714  3.9060 4.110851 6 NOPRINT
+57.550000 0.868340  2.3480 3.844928 6 NOPRINT
+60.620000 0.294717  3.7920 3.588651 6 NOPRINT
+63.615000 -0.221191 2.1980 3.344616 6 NOPRINT
+66.516000 -0.704843 3.6040 3.115337 6 NOPRINT
+69.306000 -1.120529 1.9760 2.902838 6 NOPRINT
+71.968000 -1.517145 3.3480 2.707497 6 NOPRINT
+74.487000 -1.876009 1.6900 2.529161 6 NOPRINT
+76.847000 -2.210462 3.0300 2.364962 6 NOPRINT
+79.034000 -2.520387 1.3440 2.200110 6 NOPRINT
+81.034000 -2.797971 2.6560 2.018238 6 NOPRINT
+82.837000 -3.032812 0.9500 1.811887 6 NOPRINT
+84.431000 -3.220965 2.2380 1.536297 6 NOPRINT
+85.806000 -3.369622 0.5120 1.138400 6 NOPRINT
+86.955000 -3.427960 1.7860 1.138400 6 NOPRINT
+87.870000 -3.427960 0.0440 1.138400 6 NOPRINT
+88.546000 -3.427960 1.3080 1.138400 6 NOPRINT
+
+

@@ -1,5 +1,5 @@
 # DTU10MW_FAST_LIN
-The FAST model of the DTU 10 MW reference wind turbine with Aerodyn15 created for the model linearization.
+This is a repo for using the DTU10 MW model in FAST linearization. The aerodyn15 was created in there for adapting with the openFAST linearization requirement. A comparison is also made at the rated points for demonstrating the accuracy of the revised model preliminarily. More comparisons have to be made in the future. Also, more work will be finished based on this model.
 
 Comparison between the Aerodyn14 and Aerodyn15 regarding three power-generation measures.
 

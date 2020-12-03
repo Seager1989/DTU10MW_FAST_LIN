@@ -7,4 +7,4 @@ Comparison between the Aerodyn14 and Aerodyn15 regarding three power-generation 
 
 Comparison between the Aerodyn14 and Aerodyn15 regarding three load measures.
 
-![alt text](https://github.com/[username]/[reponame]/blob/[branch]/image.jpg?raw=true)
+![alt text](Comparison/RatedPower/ComparisonA14-A15-ratedpointloadfig.jpg?raw=true)

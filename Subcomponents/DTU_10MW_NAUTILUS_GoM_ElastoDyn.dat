@@ -1,0 +1,224 @@
+------- ELASTODYN V1.04.* INPUT FILE -------------------------------------------
+LIFES50+ NAUTILUS Semi-Sub Gulf of Maine Public Design with DTU 10MW Reference Wind Turbine, Michael Borg (borg@dtu.dk), Antonio Pegalajar-Jurado (ampj@dtu.dk) and Freddy Madsen (fjma@dtu.dk), DTU Wind Energy, January 2018
+---------------------- SIMULATION CONTROL --------------------------------------
+True         Echo        - Echo input data to "<RootName>.ech" (flag)
+          3   Method      - Integration method: {1: RK4, 2: AB4, or 3: ABM4} (-)
+      0.0025  DT          - Integration time step (s)
+---------------------- ENVIRONMENTAL CONDITION ---------------------------------
+    9.80665   Gravity     - Gravitational acceleration (m/s^2)
+---------------------- DEGREES OF FREEDOM --------------------------------------
+True        FlapDOF1    - First flapwise blade mode DOF (flag)
+False         FlapDOF2    - Second flapwise blade mode DOF (flag)
+False        EdgeDOF     - First edgewise blade mode DOF (flag)
+False       TeetDOF     - Rotor-teeter DOF (flag) [unused for 3 blades]
+False         DrTrDOF     - Drivetrain rotational-flexibility DOF (flag)
+True        GenDOF      - Generator DOF (flag)
+False        YawDOF      - Yaw DOF (flag)
+True        TwFADOF1    - First fore-aft tower bending-mode DOF (flag)
+False         TwFADOF2    - Second fore-aft tower bending-mode DOF (flag)
+False         TwSSDOF1    - First side-to-side tower bending-mode DOF (flag)
+False         TwSSDOF2    - Second side-to-side tower bending-mode DOF (flag)
+False        PtfmSgDOF   - Platform horizontal surge translation DOF (flag)
+False        PtfmSwDOF   - Platform horizontal sway translation DOF (flag)
+False        PtfmHvDOF   - Platform vertical heave translation DOF (flag)
+False        PtfmRDOF    - Platform roll tilt rotation DOF (flag)
+False        PtfmPDOF    - Platform pitch tilt rotation DOF (flag)
+False        PtfmYDOF    - Platform yaw rotation DOF (flag)
+---------------------- INITIAL CONDITIONS --------------------------------------
+          0   OoPDefl     - Initial out-of-plane blade-tip displacement (meters)
+          0   IPDefl      - Initial in-plane blade-tip deflection (meters)
+		  0   BlPitch(1)  - Blade 1 initial pitch (degrees)
+		  0   BlPitch(2)  - Blade 2 initial pitch (degrees)
+		  0   BlPitch(3)  - Blade 3 initial pitch (degrees) [unused for 2 blades]
+          0   TeetDefl    - Initial or fixed teeter angle (degrees) [unused for 3 blades]
+          0   Azimuth     - Initial azimuth angle for blade 1 (degrees)
+          9.6   RotSpeed    - Initial or fixed rotor speed (rpm)
+          0   NacYaw      - Initial or fixed nacelle-yaw angle (degrees)
+          0   TTDspFA     - Initial fore-aft tower-top displacement (meters)
+          0   TTDspSS     - Initial side-to-side tower-top displacement (meters)
+          5   PtfmSurge   - Initial or fixed horizontal surge translational displacement of platform (meters)
+   0.000000   PtfmSway    - Initial or fixed horizontal sway translational displacement of platform (meters)
+      -0.01   PtfmHeave   - Initial or fixed vertical heave translational displacement of platform (meters)
+   0.000000   PtfmRoll    - Initial or fixed roll tilt rotational displacement of platform (degrees)
+          1   PtfmPitch   - Initial or fixed pitch tilt rotational displacement of platform (degrees)
+   0.000000   PtfmYaw     - Initial or fixed yaw rotational displacement of platform (degrees)
+---------------------- TURBINE CONFIGURATION -----------------------------------
+          3   NumBl       - Number of blades (-)
+       89.2   TipRad      - The distance from the rotor apex to the blade tip (meters) 89.2
+        2.8   HubRad      - The distance from the rotor apex to the blade root (meters) 2.8
+       -2.5   PreCone(1)  - Blade 1 cone angle (degrees)
+       -2.5   PreCone(2)  - Blade 2 cone angle (degrees)
+       -2.5   PreCone(3)  - Blade 3 cone angle (degrees) [unused for 2 blades]
+        0.0   HubCM       - Distance from rotor apex to hub mass [positive downwind] (meters)
+        0.0   UndSling    - Undersling length [distance from teeter pin to the rotor apex] (meters) [unused for 3 blades]
+          0   Delta3      - Delta-3 angle for teetering rotors (degrees) [unused for 3 blades]
+          0   AzimB1Up    - Azimuth value to use for I/O when blade 1 points up (degrees)
+       -7.1   OverHang    - Distance from yaw axis to rotor apex [3 blades] or teeter pin [2 blades] (meters)
+       3.55   ShftGagL    - Distance from rotor apex [3 blades] or teeter pin [2 blades] to shaft strain gages [positive for upwind rotors] (meters)
+       -5.0   ShftTilt    - Rotor shaft tilt angle (degrees)
+      2.687   NacCMxn     - Downwind distance from the tower-top to the nacelle CM (meters)
+          0   NacCMyn     - Lateral  distance from the tower-top to the nacelle CM (meters)
+       2.45   NacCMzn     - Vertical distance from the tower-top to the nacelle CM (meters)
+   -3.09528   NcIMUxn     - Downwind distance from the tower-top to the nacelle IMU (meters)
+          0   NcIMUyn     - Lateral  distance from the tower-top to the nacelle IMU (meters)
+    2.23336   NcIMUzn     - Vertical distance from the tower-top to the nacelle IMU (meters)
+       2.75   Twr2Shft    - Vertical distance from the tower-top to the rotor shaft (meters)
+    115.636   TowerHt     - Height of tower above ground level [onshore] or MSL [offshore] (meters)
+      8.636   TowerBsHt   - Height of tower base above ground level [onshore] or MSL [offshore] (meters)
+          0   PtfmCMxt    - Downwind distance from the ground level [onshore] or MSL [offshore] to the platform CM (meters)
+          0   PtfmCMyt    - Lateral distance from the ground level [onshore] or MSL [offshore] to the platform CM (meters)
+    -13.314   PtfmCMzt    - Vertical distance from the ground level [onshore] or MSL [offshore] to the platform CM (meters)
+          0   PtfmRefzt   - Vertical distance from the ground level [onshore] or MSL [offshore] to the platform reference point (meters)
+---------------------- MASS AND INERTIA ----------------------------------------
+		  0   TipMass(1)  - Tip-brake mass, blade 1 (kg)
+          0   TipMass(2)  - Tip-brake mass, blade 2 (kg)
+          0   TipMass(3)  - Tip-brake mass, blade 3 (kg) [unused for 2 blades]
+   105.520E3  HubMass     - Hub mass (kg)
+  325.6709E3  HubIner     - Hub inertia about rotor axis [3 blades] or teeter axis [2 blades] (kg m^2)
+      1500.5  GenIner     - Generator inertia about HSS (kg m^2)
+ 446.00625E3  NacMass     - Nacelle mass (kg)
+7326.34645E3  NacYIner    - Nacelle inertia about yaw axis (kg m^2)
+          0   YawBrMass   - Yaw bearing mass (kg)
+ 7.7810e+06   PtfmMass    - Platform mass (kg)
+ 4.8290e+09   PtfmRIner   - Platform inertia for roll tilt rotation about the platform CM (kg m^2)
+ 4.8290e+09   PtfmPIner   - Platform inertia for pitch tilt rotation about the platform CM (kg m^2)
+ 7.4510e+09   PtfmYIner   - Platform inertia for yaw rotation about the platform CM (kg m^2)
+---------------------- BLADE ---------------------------------------------------
+         51   BldNodes    - Number of blade nodes (per blade) used for analysis (-)
+"./Rotor/DTU_10MW_ElastoDyn_Blades.dat"    BldFile(1)  - Name of file containing properties for blade 1 (quoted string)
+"./Rotor/DTU_10MW_ElastoDyn_Blades.dat"    BldFile(2)  - Name of file containing properties for blade 2 (quoted string)
+"./Rotor/DTU_10MW_ElastoDyn_Blades.dat"    BldFile(3)  - Name of file containing properties for blade 3 (quoted string) [unused for 2 blades]
+---------------------- ROTOR-TEETER --------------------------------------------
+          0   TeetMod     - Rotor-teeter spring/damper model {0: none, 1: standard, 2: user-defined from routine UserTeet} (switch) [unused for 3 blades]
+          0   TeetDmpP    - Rotor-teeter damper position (degrees) [used only for 2 blades and when TeetMod=1]
+          0	  TeetDmp     - Rotor-teeter damping constant (N-m/(rad/s)) [used only for 2 blades and when TeetMod=1]
+          0   TeetCDmp    - Rotor-teeter rate-independent Coulomb-damping moment (N-m) [used only for 2 blades and when TeetMod=1]
+          0   TeetSStP    - Rotor-teeter soft-stop position (degrees) [used only for 2 blades and when TeetMod=1]
+          0   TeetHStP    - Rotor-teeter hard-stop position (degrees) [used only for 2 blades and when TeetMod=1]
+          0   TeetSSSp    - Rotor-teeter soft-stop linear-spring constant (N-m/rad) [used only for 2 blades and when TeetMod=1]
+          0   TeetHSSp    - Rotor-teeter hard-stop linear-spring constant (N-m/rad) [used only for 2 blades and when TeetMod=1]
+---------------------- DRIVETRAIN ----------------------------------------------
+        100   GBoxEff     - Gearbox efficiency (%)
+       50.0   GBRatio     - Gearbox ratio (-)
+ 2.317025E9   DTTorSpr    - Drivetrain torsional spring (N-m/rad)
+    9240560   DTTorDmp    - Drivetrain torsional damper (N-m/(rad/s))
+---------------------- FURLING -------------------------------------------------
+False         Furling     - Read in additional model properties for furling turbine (flag) [must currently be FALSE)
+"unused"      FurlFile    - Name of file containing furling properties (quoted string) [unused when Furling=False]
+---------------------- TOWER ---------------------------------------------------
+       79   TwrNodes    - Number of tower nodes used for analysis (-)
+"Subcomponents/DTU_10MW_NAUTILUS_GoM_ElastoDyn_Tower.dat"    TwrFile     - Name of file containing tower properties (quoted string)
+---------------------- OUTPUT --------------------------------------------------
+True          SumPrint    - Print summary data to "<RootName>.sum" (flag)
+          1   OutFile     - Switch to determine where output will be placed: {1: in module output file only; 2: in glue code output file only; 3: both} (currently unused)
+True          TabDelim    - Use tab delimiters in text tabular output file? (flag) (currently unused)
+"ES10.3E2"    OutFmt      - Format used for text tabular output (except time).  Resulting field should be 10 characters. (quoted string)  [not checked for validity!] (currently unused)
+        0.0   TStart      - Time to begin tabular output (s) (currently unused)
+          1   DecFact     - Decimation factor for tabular output {1: output every time step} (-) (currently unused)
+          0   NTwGages    - Number of tower nodes that have strain gages for output [0 to 9] (-)
+          0   TwrGagNd    - List of tower nodes that have strain gages [1 to TwrNodes] (-) [unused if NTwGages=0]
+          0   NBlGages    - Number of blade nodes that have strain gages for output [0 to 9] (-)
+              BldGagNd    - List of blade nodes that have strain gages [1 to BldNodes] (-) [unused if NBlGages=0]
+              OutList     - The next line(s) contains a list of output parameters.  See OutListParameters.xlsx for a listing of available output channels, (-)
+"TipDxc1"                           -Blade 1 out-of-plane tip deflection (relative to the pitch axis) (unavailable for two-bladed turbines) Directed along the xc,3-axis (m)
+"TipDyc1"                           -Blade 1 in-plane tip deflection (relative to the pitch axis) (unavailable for two-bladed turbines) Directed along the yc,3-axis (m)
+"TipDxc2"                           -Blade 2 out-of-plane tip deflection (relative to the pitch axis) (unavailable for two-bladed turbines) Directed along the xc,3-axis (m)
+"TipDyc2"                           -Blade 2 in-plane tip deflection (relative to the pitch axis) (unavailable for two-bladed turbines) Directed along the yc,3-axis (m)
+"TipDxc3"                           -Blade 3 out-of-plane tip deflection (relative to the pitch axis) (unavailable for two-bladed turbines) Directed along the xc,3-axis (m)
+"TipDyc3"                           -Blade 3 in-plane tip deflection (relative to the pitch axis) (unavailable for two-bladed turbines) Directed along the yc,3-axis (m)
+"BldPitch1"                         -Blade 1 pitch angle
+"BldPitch2"                         -Blade 2 pitch angle
+"BldPitch3"                         -Blade 3 pitch angle
+"PtfmSurge"               - Platform translational surge displacement
+"PtfmSway"                - Platform translational sway  displacement
+"PtfmHeave"               - Platform translational heave displacement
+"PtfmRoll"                - Platform rotational roll  displacement
+"PtfmPitch"               - Platform rotational pitch displacement
+"PtfmYaw"                 - Platform rotational yaw   displacement
+"Azimuth"                           -Rotor azimuth angle (position) About the xa- and xs-axes (deg)
+"RotSpeed"                          -Rotor azimuth angular speed About the xa- and xs-axes (rpm)
+"RotAccel"                          - Rotor azimuth angular acceleration About the xa- and xs-axes (deg/sec^2)
+"LSSGagP"                           -LSS strain-gage azimuth angle (position) (on the gearbox side of the LSS) About the xa- and xs-axes (deg)
+"LSSGagV"                           -LSS strain-gage angular speed (on the gearbox side of the LSS) About the xa- and xs-axes (rpm)
+"LSSGagA"                           -LSS strain-gage angular acceleration (on the gearbox side of the LSS) About the xa- and xs-axes (deg/sec^2)
+"GenSpeed"                          -Angular speed of the HSS and generator Same sign as LSSGagVxa /LSSGagVxs /LSSGagV (rpm)
+"GenAccel"                          -Angular acceleration of the HSS and generator Same sign as LSSGagAxa / LSSGagAxs / LSSGagA (deg/sec^2)
+"YawPos"                            - Nacelle yaw angle (position) About the zn- and zp-axes (deg)
+"YawRate"                           -  Nacelle yaw angular velocity About the zn- and zp-axes (deg/sec)
+"YawAccel"                          -   Nacelle yaw angular acceleration About the zn- and zp-axes (deg/sec^2)
+"YawBrTDxp"                         -Tower-top / yaw bearing fore-aft (translational) deflection (relative to the undeflected position) Directed along the xp-axis (m)
+"YawBrTDyp"                         -Tower-top / yaw bearing side-to-side (translational) deflection (relative to the undeflected position) Directed along the yp-axis (m)
+"YawBrTDzp"                         -Tower-top / yaw bearing axial (translational) deflection (relative to the undeflected position) Directed along the zp-axis (m)
+"YawBrTDxt"                         -Tower-top / yaw bearing fore-aft (translational) deflection (relative to the undeflected position) Directed along the xt-axis (m)
+"YawBrTDyt"                         -Tower-top / yaw bearing side-to-side (translational) deflection (relative to the undeflected position) Directed along the yt-axis (m)
+"YawBrTDzt"                         -Tower-top / yaw bearing axial (translational) deflection (relative to the undeflected position)Directed along the zt-axis (m)
+"YawBrTAxp"                         -Tower-top / yaw bearing fore-aft (translational) acceleration (absolute) Directed along the xp-axis (m/sec^2)
+"YawBrTAyp"                         -Tower-top / yaw bearing side-to-side(translational) acceleration (absolute) Directed along the yp-axis (m/sec^2)
+"YawBrTAzp"                         -Tower-top / yaw bearing axial (translational) acceleration (absolute) Directed along the zp-axis (m/sec^2)
+"RootFxc1"                          -Blade 1 out-of-plane shear force at the blade root Directed along the xc,1-axis (kN)
+"RootFyc1"                          -Blade 1 in-plane shear force at the blade root Directed along the yc,1-axis (kN)
+"RootFzc1"                          -RootFzb1 Blade 1 axial force at the blade root Directed along the zc,1- and zb,1-axes (kN)
+"RootFxb1"                          -Blade 1 flapwise shear force at the blade root Directed along the xb,1-axis (kN)
+"RootFyb1"                          -Blade 1 edgewise shear force at the blade root Directed along the yb,1-axis (kN)
+"RootMxc1"                          -RootMIP1 Blade 1 in-plane moment (i.e., the moment caused by in-plane forces) at the blade root About the xc,1-axis (kN·m)
+"RootMyc1"                          -RootMOoP1 Blade 1 out-of-plane moment (i.e., the moment caused by out-of-plane forces) at the blade root About the yc,1-axis (kN·m)
+"RootMzc1"                          -RootMzb1 Blade 1 pitching moment at the blade root About the zc,1- and zb,1-axes (kN·m)
+"RootMxb1"                          -RootMEdg1 Blade 1 edgewise moment (i.e., the moment caused by edgewise forces) at the blade root About the xb,1-axis (kN·m)
+"RootMyb1"                          -RootMFlp1 Blade 1 flapwise moment (i.e., the moment caused by flapwise forces) at the blade root About the yb,1-axis (kN·m)
+"RootFxc2"                          -Blade 2 out-of-plane shear force at the blade root Directed along the xc,1-axis (kN)
+"RootFyc2"                          -Blade 2 in-plane shear force at the blade root Directed along the yc,1-axis (kN)
+"RootFzc2"                          -RootFzb1 Blade 2 axial force at the blade root Directed along the zc,1- and zb,1-axes (kN)
+"RootFxb2"                          -Blade 2 flapwise shear force at the blade root Directed along the xb,1-axis (kN)
+"RootFyb2"                          -Blade 2 edgewise shear force at the blade root Directed along the yb,1-axis (kN)
+"RootMxc2"                          -RootMIP1 Blade 2 in-plane moment (i.e., the moment caused by in-plane forces) at the blade root About the xc,1-axis (kN·m)
+"RootMyc2"                          -RootMOoP1 Blade 2 out-of-plane moment (i.e., the moment caused by out-of-plane forces) at the blade root About the yc,1-axis (kN·m)
+"RootMzc2"                          -RootMzb1 Blade 2 pitching moment at the blade root About the zc,1- and zb,1-axes (kN·m)
+"RootMxb2"                          -RootMEdg1 Blade 2 edgewise moment (i.e., the moment caused by edgewise forces) at the blade root About the xb,1-axis (kN·m)
+"RootMyb2"                          -RootMFlp1 Blade 2 flapwise moment (i.e., the moment caused by flapwise forces) at the blade root About the yb,1-axis (kN·m)
+"RootFxc3"                          -Blade 3 out-of-plane shear force at the blade root Directed along the xc,1-axis (kN)
+"RootFyc3"                          -Blade 3 in-plane shear force at the blade root Directed along the yc,1-axis (kN)
+"RootFzc3"                          -RootFzb1 Blade 3 axial force at the blade root Directed along the zc,1- and zb,1-axes (kN)
+"RootFxb3"                          -Blade 3 flapwise shear force at the blade root Directed along the xb,1-axis (kN)
+"RootFyb3"                          -Blade 3 edgewise shear force at the blade root Directed along the yb,1-axis (kN)
+"RootMxc3"                          -RootMIP1 Blade 3 in-plane moment (i.e., the moment caused by in-plane forces) at the blade root About the xc,1-axis (kN·m)
+"RootMyc3"                          -RootMOoP1 Blade 3 out-of-plane moment (i.e., the moment caused by out-of-plane forces) at the blade root About the yc,1-axis (kN·m)
+"RootMzc3"                          -RootMzb1 Blade 3 pitching moment at the blade root About the zc,1- and zb,1-axes (kN·m)
+"RootMxb3"                          -RootMEdg1 Blade 3 edgewise moment (i.e., the moment caused by edgewise forces) at the blade root About the xb,1-axis (kN·m)
+"RootMyb3"                          -RootMFlp1 Blade 3 flapwise moment (i.e., the moment caused by flapwise forces) at the blade root About the yb,1-axis (kN·m)
+"RotThrust"                         -LSS thrust force (this is constant along the shaft and is equivalent to the rotor thrust force) Directed along the xa- and xs-axes (kN)
+"LSShftFya"                         -Rotating LSS shear force (this is constant along the shaft) Directed along the ya-axis (kN)
+"LSShftFza"                         -Rotating LSS shear force (this is constant along the shaft) Directed along the za-axis (kN)
+"LSShftFys"                         - Nonrotating LSS shear force (this is constant along the shaft) Directed along the ys-axis (kN)
+"LSShftFzs"                         -Nonrotating LSS shear force (this is constant along the shaft) Directed along the zs-axis (kN)
+"LSShftTq"                          -      LSS torque (this is constant along the shaft and is equivalent to the rotor torque) About the xa- and xs-axes (kN·m)
+"LSSTipMya"                         -      Rotating LSS bending moment at the shaft tip (teeter pin for two-bladed turbines, apex of rotation for three-bladed turbines) About the ya-axis (kN·m)
+"LSSTipMza"                         -      Rotating LSS bending moment at the shaft tip (teeter pin for two-bladed turbines, apex of rotation       for three-bladed turbines) About the za-axis (kN·m)
+"LSSTipMys"                         -Nonrotating LSS bending moment at the shaft tip (teeter pin for two-bladed turbines, apex of rotation for three-bladed turbines) About the ys-axis (kN·m)
+"LSSTipMzs"                         -Nonrotating LSS bending moment at the shaft tip (teeter pin for two-bladed turbines, apex of rotation for three-bladed turbines) About the zs-axis (kN·m)
+"LSSGagMya"                         -Rotating LSS bending moment at the shaft's strain gage (shaft strain gage located by input ShftGagL) About the ya-axis (kN·m)
+"LSSGagMza"                         -Rotating LSS bending moment at the shaft's strain gage (shaft strain gage located by input ShftGagL) About the za-axis (kN·m)
+"LSSGagMys"                         -      Nonrotating LSS bending moment at the shaft's strain gage (shaft strain gage located by input ShftGagL) About the ys-axis (kN·m)
+"LSSGagMzs"                         -Nonrotating LSS bending moment at the shaft's strain gage (shaft strain gage located by input ShftGagL) About the zs-axis (kN·m)
+"HSShftTq"                          -      HSS torque (this is constant along the shaft) (kN·m)
+"HSShftPwr"                         -HSS power Same sign as HSShftTq (kW)
+"HSSBrTq"                           -     HSS brake torque (i.e., the moment applied to the HSS by the brake) Always positive (indicating dissipation of power) (kN·m)
+"YawBrFxn"                          -      Rotating (with nacelle) tower-top / yaw bearing shear force Directed along the xn-axis (kN)
+"YawBrFyn"                          -      Rotating (with nacelle) tower-top / yaw bearing shear force Directed along the yn-axis (kN)
+"YawBrFzn"                          -      YawBrFzp Tower-top / yaw bearing axial force Directed along the zn- and zp-axes (kN)
+"YawBrFxp"                          -      Tower-top / yaw bearing fore-aft (nonrotating) shear force Directed along the xp-axis (kN)
+"YawBrFyp"                          -      Tower-top / yaw bearing side-to-side (nonrotating) shear force Directed along the yp-axis (kN)
+"YawBrMxn"                          -      Rotating (with nacelle) tower-top / yaw bearing roll moment About the xn-axis (kN·m) 
+"YawBrMyn"                          -      Rotating (with nacelle) tower-top / yaw bearing pitch moment About the yn-axis (kN·m)
+"YawBrMzn"                          -      YawBrMzp YawMom Tower-top / yaw bearing yaw moment About the zn- and zp-axes (kN·m)
+"YawBrMxp"                          -      Nonrotating tower-top / yaw bearing roll moment About the xp-axis (kN·m)
+"YawBrMyp"                          -      Nonrotating tower-top / yaw bearing pitch moment About the yp-axis (kN·m)
+"TwrBsFxt"                          -      Tower base fore-aft shear force Directed along the xt-axis (kN)
+"TwrBsFyt"                          -      Tower base side-to-side shear force Directed along the yt-axis (kN)
+"TwrBsFzt"                          -      Tower base axial force Directed along the zt-axis (kN)
+"TwrBsMxt"                          -      Tower base roll (or side-to-side) moment (i.e., the moment caused by side-to-side forces) About the xt-axis (kN·m)
+"TwrBsMyt"                          -      Tower base pitching (or fore-aft) moment (i.e., the moment caused by fore-aft forces) About the yt-axis (kN·m)
+"TwrBsMzt"                          -      Tower base yaw (or torsional) moment About the zt-axis (kN·m)
+"NcIMUTAxs"							- 	   Nacelle inertial measurement unit translational acceleration (absolute)
+"NcIMUTAys"							- 	   Nacelle inertial measurement unit translational acceleration (absolute)
+END of input file (the word "END" must appear in the first 3 columns of this last OutList line)
+---------------------------------------------------------------------------------------

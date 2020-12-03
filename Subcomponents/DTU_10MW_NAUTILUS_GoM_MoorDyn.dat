@@ -1,0 +1,47 @@
+--------------------- MoorDyn v1.01.* Input File ------------------------------------
+LIFES50+ NAUTILUS Semi-Sub Gulf of Maine Public Design with DTU 10MW Reference Wind Turbine, Michael Borg (borg@dtu.dk), Antonio Pegalajar-Jurado (ampj@dtu.dk) and Freddy Madsen (fjma@dtu.dk), DTU Wind Energy, January 2018
+FALSE    Echo      - echo the input file data (flag)
+----------------------- LINE TYPES ------------------------------------------
+1        NTypes    - number of LineTypes
+Name     Diam      MassDen      EA      BA/-zeta  Can   Cat   Cdn   Cdt
+(-)       (m)      (kg/m)       (N)     (N-s/-)   (-)   (-)   (-)   (-)
+main     0.097     188.18    8.035E+08   -1.0     1.00  0.50  2.40  1.50
+---------------------- CONNECTION PROPERTIES --------------------------------
+8       NConnects - number of connections including anchors and fairleads
+Node    Type      X          Y         Z       M     V      FX   FY   FZ   CdA   CA
+(-)     (-)      (m)        (m)       (m)     (kg)  (m^3)  (kN) (kN) (kN) (m^2)  (-)
+1      Fixed    592.177   592.177	-130.000   0      0      0    0    0    0     0
+2      Fixed   -592.177   592.177	-130.000   0      0      0    0    0    0     0
+3      Fixed   -592.177  -592.177	-130.000   0      0      0    0    0    0     0
+4      Fixed    592.177  -592.177   -130.000   0      0      0    0    0    0     0
+5      Vessel    31.087    31.087	  -6.333   0      0      0    0    0    0     0
+6      Vessel   -31.087    31.087	  -6.333   0      0      0    0    0    0     0
+7      Vessel   -31.087   -31.087	  -6.333   0      0      0    0    0    0     0
+8      Vessel    31.087   -31.087	  -6.333   0      0      0    0    0    0     0
+---------------------- LINE PROPERTIES --------------------------------------
+4        NLines    - number of line objects
+Line    LineType  UnstrLen  NumSegs   NodeAnch  NodeFair  Flags/Outputs
+(-)       (-)       (m)       (-)       (-)       (-)         (-)
+1         main     833.24     100        1         5           -
+2         main     833.24     100        2         6           -
+3         main     833.24     100        3         7           -
+4         main     833.24     100        4         8           -
+---------------------- SOLVER OPTIONS ---------------------------------------
+0.001    dtM       - time step to use in mooring integration (s)
+3e6    	 kbot      - bottom stiffness (Pa/m)
+3e5      cbot      - bottom damping (Pa-s/m)
+2     	 dtIC      - time interval for analyzing convergence during IC gen (s)
+600      TmaxIC    - max time for ic gen (s)
+10       CdScaleIC - factor by which to scale drag coefficients during dynamic relaxation (-)
+0.01     threshIC  - threshold for IC convergence (-)
+------------------------ OUTPUTS --------------------------------------------
+FairTen1
+FairTen2
+FairTen3
+FairTen4
+AnchTen1
+AnchTen2
+AnchTen3
+AnchTen4
+END
+------------------------- need this line --------------------------------------

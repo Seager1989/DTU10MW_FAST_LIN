@@ -186,6 +186,8 @@ True          TabDelim    - Use tab delimiters in text tabular output file? (fla
 "RootMxb3"                          -RootMEdg1 Blade 3 edgewise moment (i.e., the moment caused by edgewise forces) at the blade root About the xb,1-axis (kN·m)
 "RootMyb3"                          -RootMFlp1 Blade 3 flapwise moment (i.e., the moment caused by flapwise forces) at the blade root About the yb,1-axis (kN·m)
 "RotThrust"                         -LSS thrust force (this is constant along the shaft and is equivalent to the rotor thrust force) Directed along the xa- and xs-axes (kN)
+"RotTorq"                           - Rotor torque and low-speed shaft 0- and 90-bending moments at the main bearing
+"RotPwr"                            - Rotor Mechanical power
 "LSShftFya"                         -Rotating LSS shear force (this is constant along the shaft) Directed along the ya-axis (kN)
 "LSShftFza"                         -Rotating LSS shear force (this is constant along the shaft) Directed along the za-axis (kN)
 "LSShftFys"                         - Nonrotating LSS shear force (this is constant along the shaft) Directed along the ys-axis (kN)

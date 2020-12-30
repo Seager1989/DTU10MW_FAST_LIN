@@ -13,11 +13,11 @@ True         Echo           - Echo input data to <RootName>.ech (flag)
         119   RefHt          - Reference height for horizontal wind speed
        0.14   PLexp          - Power law exponent
 ================== Parameters for Uniform wind file   [used only for WindType = 2] ============================
-"StepWind.hh"    Filename       - Filename of time series data for uniform wind field.
+"WindField/v20ms.hh"    Filename       - Filename of time series data for uniform wind field.
         119   RefHt          - Reference height for horizontal wind speed
      125.88   RefLength      - Reference length for linear horizontal and vertical sheer
 ================== Parameters for Binary TurbSim Full-Field files   [used only for WindType = 3] ==============
-"../../Wind_fields/22.1ms.bts"    Filename       - Name of the Full field wind file to use (.bts)
+"WindField/v20ms.bts"    Filename       - Name of the Full field wind file to use (.bts)
 ================== Parameters for Binary Bladed-style Full-Field files   [used only for WindType = 4] =========
 "unused"      FilenameRoot   - Rootname of the full-field wind file to use (.wnd, .sum)
 False         TowerFile      - Have tower file (.twr) [flag]

@@ -1,2 +1,3 @@
-Update the hydrodynamic files for latest openfast
+Update the hydrodynamic files for latest openfast ------Done
+Add the wind field data with average wind of 10 m/s and 20 m/s  ----Done
 add linearization related scripts

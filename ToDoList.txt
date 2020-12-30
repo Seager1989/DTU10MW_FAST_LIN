@@ -1,2 +1,2 @@
-add the hydrodynamic files
+Update the hydrodynamic files for latest openfast
 add linearization related scripts

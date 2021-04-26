@@ -1,3 +1,4 @@
-Update the hydrodynamic files for latest openfast ------Done
-Add the wind field data with average wind of 10 m/s and 20 m/s  ----Done
-add linearization related scripts
+1) Update the hydrodynamic files for latest openfast ------Done
+2) Add the wind field data with average wind of 10 m/s and 20 m/s  ----Done
+3) add linearization related scripts
+4) Now, the Beamdyn for the DTU10MW reference model is not available. I did develop a Beamdyn model for DTU10MW but it ran out of time. This maybe a problem and should be fixed. Any suggestions or interest are welcome. 04/26/2021

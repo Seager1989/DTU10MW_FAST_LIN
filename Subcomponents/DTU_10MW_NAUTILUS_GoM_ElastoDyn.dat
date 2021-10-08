@@ -3,7 +3,7 @@ LIFES50+ NAUTILUS Semi-Sub Gulf of Maine Public Design with DTU 10MW Reference W
 ---------------------- SIMULATION CONTROL --------------------------------------
 True         Echo        - Echo input data to "<RootName>.ech" (flag)
           3   Method      - Integration method: {1: RK4, 2: AB4, or 3: ABM4} (-)
-      0.0025  DT          - Integration time step (s)
+      "default"  DT          - Integration time step (s)
 ---------------------- ENVIRONMENTAL CONDITION ---------------------------------
     9.80665   Gravity     - Gravitational acceleration (m/s^2)
 ---------------------- DEGREES OF FREEDOM --------------------------------------

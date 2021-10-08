@@ -3,7 +3,7 @@ LIFES50+ NAUTILUS Semi-Sub Gulf of Maine Public Design with DTU 10MW Reference W
 ---------------------- SIMULATION CONTROL --------------------------------------
 False         Echo            - Echo input data to <RootName>.ech (flag)
 "FATAL"       AbortLevel      - Error level when simulation should abort (string) {"WARNING", "SEVERE", "FATAL"}
-      100   TMax            - Total run time (s)
+		100   TMax            - Total run time (s)
       0.025   DT              - Recommended module time step (s)
           2   InterpOrder     - Interpolation order for input/output time history (-) {1=linear, 2=quadratic}
           1   NumCrctn        - Number of correction iterations (-) {0=explicit calculation, i.e., no corrections}
@@ -11,7 +11,7 @@ False         Echo            - Echo input data to <RootName>.ech (flag)
      2.36E7   UJacSclFact     - Scaling factor used in Jacobians (-)
 ---------------------- FEATURE SWITCHES AND FLAGS ------------------------------
           1   CompElast       - Compute structural dynamics (switch) {1=ElastoDyn; 2=ElastoDyn + BeamDyn for blades}
-	  1   CompInflow      - Compute inflow wind velocities (switch) {0=still air; 1=InflowWind; 2=external from OpenFOAM}
+		  1   CompInflow      - Compute inflow wind velocities (switch) {0=still air; 1=InflowWind; 2=external from OpenFOAM}
           2   CompAero        - Compute aerodynamic loads (switch) {0=None; 1=AeroDyn v14; 2=AeroDyn v15}
           1   CompServo       - Compute control and electrical-drive dynamics (switch) {0=None; 1=ServoDyn}
           0	  CompHydro       - Compute hydrodynamic loads (switch) {0=None; 1=HydroDyn}
@@ -20,16 +20,16 @@ False         Echo            - Echo input data to <RootName>.ech (flag)
           0   CompIce         - Compute ice loads (switch) {0=None; 1=IceFloe; 2=IceDyn}
 ---------------------- INPUT FILES ---------------------------------------------
 "Subcomponents/DTU_10MW_NAUTILUS_GoM_ElastoDyn.dat"				EDFile          - Name of file containing ElastoDyn input parameters (quoted string)
-"unused"      										BDBldFile(1)    - Name of file containing BeamDyn input parameters for blade 1 (quoted string)
-"unused"      										BDBldFile(2)    - Name of file containing BeamDyn input parameters for blade 2 (quoted string)
-"unused"      										BDBldFile(3)    - Name of file containing BeamDyn input parameters for blade 3 (quoted string)
+"unused"      													BDBldFile(1)    - Name of file containing BeamDyn input parameters for blade 1 (quoted string)
+"unused"      													BDBldFile(2)    - Name of file containing BeamDyn input parameters for blade 2 (quoted string)
+"unused"      													BDBldFile(3)    - Name of file containing BeamDyn input parameters for blade 3 (quoted string)
 "Subcomponents/DTU_10MW_InflowWind.dat"    						InflowFile      - Name of file containing inflow wind input parameters (quoted string)
-"Rotor/DTU_10MW_AeroDyn15.dat"						AeroFile        - Name of file containing aerodynamic input parameters (quoted string)
-"Subcomponents/DTU_10MW_NAUTILUS_GoM_ServoDyn.dat" 		ServoFile       - Name of file containing control and electrical-drive input parameters (quoted string)
+"Rotor/DTU_10MW_AeroDyn15.dat"									AeroFile        - Name of file containing aerodynamic input parameters (quoted string)
+"Subcomponents/DTU_10MW_NAUTILUS_GoM_ServoDyn.dat" 				ServoFile       - Name of file containing control and electrical-drive input parameters (quoted string)
 "Subcomponents/DTU_10MW_NAUTILUS_GoM_HydroDyn.dat"    			HydroFile       - Name of file containing hydrodynamic input parameters (quoted string)
-"unused"      										SubFile         - Name of file containing sub-structural input parameters (quoted string)
-"Subcomponents/DTU_10MW_NAUTILUS_GoM_MoorDyn.dat"    	MooringFile     - Name of file containing mooring system input parameters (quoted string)
-"unused"      										IceFile         - Name of file containing ice input parameters (quoted string)
+"unused"      													SubFile         - Name of file containing sub-structural input parameters (quoted string)
+"Subcomponents/DTU_10MW_NAUTILUS_GoM_MoorDyn.dat"    			MooringFile     - Name of file containing mooring system input parameters (quoted string)
+"unused"      													IceFile         - Name of file containing ice input parameters (quoted string)
 ---------------------- OUTPUT --------------------------------------------------
 True          SumPrint        - Print summary data to "<RootName>.sum" (flag)
 		  2	  SttsTime        - Amount of time between screen status messages (s)
